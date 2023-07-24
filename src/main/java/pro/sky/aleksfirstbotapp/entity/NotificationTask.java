@@ -1,51 +1,46 @@
 package pro.sky.aleksfirstbotapp.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ * Сущность - напоминание задачи
+ */
 @Entity
+@Data
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "notification_tasks2")
 public class NotificationTask {
 
+    /**
+     * Идентификатор напоминаний
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    /**
+     * Задача, которую нужно запланировать
+     */
     @Column(name = "message", nullable = false)
     private String message;
+
+    /**
+     * Идентификатор пользователя
+     */
     @Column(name = "chat_id", nullable = false)
     private long chatId;
+
+    /**
+     * Дата и время планируемой задачи
+     */
     @Column(name = "notification_date_time", nullable = false)
     private LocalDateTime notificationDateTime;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public long getChatId() {
-        return chatId;
-    }
-
-    public void setChatId(long chatId) {
-        this.chatId = chatId;
-    }
-
-    public LocalDateTime getNotificationDateTime() {
-        return notificationDateTime;
-    }
-
-    public void setNotificationDateTime(LocalDateTime localDateTime) {
-        this.notificationDateTime = localDateTime;
-    }
 }

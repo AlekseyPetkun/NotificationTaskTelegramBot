@@ -60,7 +60,8 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
                         if ("/start".equals(text)) {
                             sendMessage(chatId, "Привет!\n" +
                                     "Я помогу тебе запланировать задачу.\n" +
-                                    "Отправь ее в формате: 12.03.2023 21:00 Сделать домашку");
+                                    "Отправь ее в формате: \n" +
+                                    "15.03.2023 12:32 Поздравить с Днем Рождения Александра");
                         } else if (text != null) {
                             Matcher matcher = pattern.matcher(text);
                             if (matcher.find()) {
