@@ -21,6 +21,7 @@ JUnit\
 Mockito\
 Telegram-bot API (pengrand)\
 Maven\
+Docker\
 Liquibase
 
 ## Структура базы данных: ##
