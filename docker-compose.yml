@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
-  aleksFirstBot:
+  aleks_first_bot:
     build:
       context: .
     environment:
